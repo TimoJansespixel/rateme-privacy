@@ -1,38 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>RateMe Privacy Policy</title>
-    <meta charset="utf-8">
-    <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; }
-        h1 { color: #333; border-bottom: 2px solid #5e17eb; }
-        .section { margin: 20px 0; }
-        .highlight { background: #f0f0f0; padding: 15px; border-radius: 5px; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RateMe — Privacy & Data Deletion</title>
+
+  <!-- Lexend font to match the app -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg: #fafbfc;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #5e17eb;
+      --accent-ghost: rgba(94, 23, 235, 0.08);
+      --shadow: 0 10px 30px rgba(0,0,0,.07);
+      --radius: 16px;
+      --radius-sm: 12px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: 'Lexend', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+      color: var(--text);
+      background:
+        radial-gradient(1200px 800px at 10% -10%, rgba(94,23,235,.08), transparent 50%),
+        radial-gradient(1000px 700px at 110% 0%, rgba(94,23,235,.06), transparent 50%),
+        var(--bg);
+      line-height: 1.6;
+      padding: 40px 16px;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .header {
+      padding: 28px 28px 16px;
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(94,23,235,.06), transparent 60%),
+        #fff;
+    }
+
+    .brand {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .logo {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), #7b3fe9);
+      box-shadow: 0 6px 18px rgba(94,23,235,.3);
+    }
+    .title {
+      margin: 0; font-size: 28px; font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      margin: 6px 0 0; color: var(--muted); font-size: 14px;
+    }
+
+    .content { padding: 24px 28px 8px; }
+    .section { margin: 20px 0; padding: 20px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: #fff; }
+    .section h2 { margin: 0 0 10px; font-size: 18px; }
+    .muted { color: var(--muted); }
+
+    .steps { margin: 0; padding-left: 18px; }
+    .chip {
+      display: inline-block;
+      padding: 6px 10px;
+      background: var(--accent-ghost);
+      color: var(--accent);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .02em;
+    }
+
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+    .btn {
+      appearance: none; border: 0; cursor: pointer;
+      padding: 12px 16px; border-radius: 12px; font-weight: 700;
+      transition: transform .08s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+      text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-primary { background: var(--accent); color: #fff; box-shadow: 0 8px 20px rgba(94,23,235,.25); }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(94,23,235,.28); }
+    .btn-ghost { background: var(--accent-ghost); color: var(--accent); }
+    .btn-ghost:hover { transform: translateY(-1px); }
+
+    .grid {
+      display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px;
+    }
+    .col-7 { grid-column: span 7; }
+    .col-5 { grid-column: span 5; }
+    @media (max-width: 860px) { .col-7, .col-5 { grid-column: 1 / -1; } }
+
+    .footer {
+      padding: 16px 28px 24px;
+      border-top: 1px solid var(--line);
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
+      background: #fff;
+    }
+    .small { font-size: 12px; color: var(--muted); }
+  </style>
 </head>
+
 <body>
-    <h1>RateMe Privacy Policy</h1>
-    
-    <div class="section">
-        <h2>Data Deletion Instructions</h2>
-        <div class="highlight">
-            <p><strong>To delete your data from RateMe:</strong></p>
-            <ol>
+  <main class="container">
+    <article class="card">
+      <header class="header">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <h1 class="title">RateMe — Privacy & Data Deletion</h1>
+            <p class="subtitle">How we handle your data, and how to remove it any time.</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="grid">
+          <div class="col-7">
+            <div class="section">
+              <h2>Data Deletion Instructions <span class="chip">Your Control</span></h2>
+              <p class="muted">Delete your data from RateMe at any time using the app or by contacting us.</p>
+              <ol class="steps">
                 <li>Open the RateMe app</li>
                 <li>Go to Settings → Account → Delete Account</li>
-                <li>Or contact us directly for assistance</li>
-            </ol>
+                <li>Confirm to permanently remove your account and associated data</li>
+              </ol>
+              <div class="cta-row">
+                <a class="btn btn-primary" href="rateme://settings/account">Open in App</a>
+                <a class="btn btn-ghost" href="mailto:replace-this@email.com?subject=RateMe%20Data%20Deletion%20Request">Request via Email</a>
+              </div>
+            </div>
+
+            <div class="section">
+              <h2>What We Collect</h2>
+              <ul class="steps">
+                <li>Account details (email, name)</li>
+                <li>Profile information you provide</li>
+                <li>Photos you upload for moderation and rating</li>
+                <li>Device info for security and analytics</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="section">
+              <h2>How We Use Your Data</h2>
+              <p class="muted">We use your data to operate RateMe, including:</p>
+              <ul class="steps">
+                <li>Authentication (Supabase Auth)</li>
+                <li>Photo storage & AI moderation (Firebase)</li>
+                <li>Improving safety and preventing abuse</li>
+              </ul>
+            </div>
+
+            <div class="section">
+              <h2>Contact</h2>
+              <p class="muted">Questions or concerns? We’re here to help.</p>
+              <div class="cta-row">
+                <a class="btn btn-ghost" href="mailto:replace-this@email.com">Email Support</a>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    
-    <div class="section">
-        <h2>What Data We Collect</h2>
-        <p>We collect your photos, profile information, and authentication data to provide our rating service.</p>
-    </div>
-    
-    <div class="section">
-        <h2>Contact Information</h2>
-        <p>For privacy questions or data deletion requests, please contact us.</p>
-    </div>
+      </section>
+
+      <footer class="footer">
+        <span class="small">Last updated: <script>document.write(new Date().toISOString().slice(0,10));</script></span>
+        <span class="small">© <script>document.write(new Date().getFullYear());</script> RateMe</span>
+      </footer>
+    </article>
+  </main>
 </body>
 </html>
